@@ -8,6 +8,6 @@ mysqli_query($bd, "UPDATE userlog  SET logout = '$ldate' WHERE username = '" . $
 session_unset();
 
 // Use PHP header redirect instead of JavaScript
-header("Location: ../index.html");
+header("Location: ../index.php");
 exit();
 ?>
