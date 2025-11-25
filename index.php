@@ -393,7 +393,7 @@
     <footer>
       <div class="container">
         <div class="footer-content">
-          <h3>ResolveX - Complaint Management System</h3>
+          <h3>ResolveX_utsav - Complaint Management System</h3>
           <p>Efficiently managing complaints for a better tomorrow</p>
           <div class="social-links">
             <a href="#"><i class="fab fa-facebook-f"></i></a>
