@@ -324,7 +324,7 @@ if (strlen($_SESSION['login']) == 0) {
                 while ($row = mysqli_fetch_array($query)) { ?>
 
                   <div class="profile-header">
-                    <img src="assets/img/ui-sam.jpg" class="profile-avatar" alt="Profile Image">
+                    <img src="../assets/img/ui-sam.jpg" class="profile-avatar" alt="Profile Image">
                     <div>
                       <h2 class="profile-name"><?php echo htmlentities($row['fullName']); ?></h2>
                       <p class="profile-email"><?php echo htmlentities($row['userEmail']); ?></p>

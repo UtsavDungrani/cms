@@ -202,7 +202,7 @@
             <?php $query = mysqli_query($bd, "select fullName from users where userEmail='" . $_SESSION['login'] . "'");
             while ($row = mysqli_fetch_array($query)) {
                 ?>
-                <img src="assets/img/ui-sam.jpg" class="user-avatar" alt="User Avatar">
+                <img src="../assets/img/ui-sam.jpg" class="user-avatar" alt="User Avatar">
                 <h4 class="user-name"><?php echo htmlentities($row['fullName']); ?></h4>
                 <div class="user-role">User Panel</div>
             <?php } ?>
