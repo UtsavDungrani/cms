@@ -363,12 +363,6 @@ if (strlen($_SESSION['alogin']) == 0) {
 				<div class="container-fluid">
 					<div class="row">
 						<div class="span12">
-							<!-- Breadcrumb -->
-							<div class="breadcrumb">
-								<a href="dashboard.php"><i class="icon-dashboard"></i> Dashboard</a>
-								<span class="divider">/</span>
-								<span class="active">Categories</span>
-							</div>
 
 							<!-- Page Header -->
 							<div class="page-header">
