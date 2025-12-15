@@ -44,8 +44,6 @@ if (strlen($_SESSION['login']) == 0) {
     <!--external css-->
     <link href="../assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
     <link rel="icon" type="image/x-icon" href="../img/favicon.ico">
-    <link rel="stylesheet" type="text/css" href="../assets/js/bootstrap-datepicker/css/datepicker.css" />
-    <link rel="stylesheet" type="text/css" href="../assets/js/bootstrap-daterangepicker/daterangepicker.css" />
 
     <style>
       :root {
@@ -432,27 +430,22 @@ if (strlen($_SESSION['login']) == 0) {
     </section>
 
     <!-- js placed at the end of the document so the pages load faster -->
-    <script src="assets/js/jquery.js"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
-    <script class="include" type="text/javascript" src="assets/js/jquery.dcjqaccordion.2.7.js"></script>
-    <script src="assets/js/jquery.scrollTo.min.js"></script>
+    <script src="../assets/js/jquery.js"></script>
+    <script src="../assets/js/bootstrap.min.js"></script>
+    <script class="include" type="text/javascript" src="../assets/js/jquery.dcjqaccordion.2.7.js"></script>
+    <script src="../assets/js/jquery.scrollTo.min.js"></script>
     <!-- <script src="assets/js/jquery.nicescroll.js" type="text/javascript"></script> -->
 
     <!--common script for all pages-->
-    <script src="assets/js/common-scripts.js"></script>
+    <script src="../assets/js/common-scripts.js"></script>
 
     <!--script for this page-->
-    <script src="assets/js/jquery-ui-1.9.2.custom.min.js"></script>
+    <script src="../assets/js/jquery-ui-1.9.2.custom.min.js"></script>
 
     <!--custom switch-->
-    <script src="assets/js/bootstrap-switch.js"></script>
+    <script src="../assets/js/bootstrap-switch.js"></script>
 
     <script>
-      //custom select box
-      $(function () {
-        $('select.styled').customSelect();
-      });
-
       // Toggle between view and edit modes
       function toggleEditMode() {
         var viewMode = document.querySelector('.detail-row, .detail-group');

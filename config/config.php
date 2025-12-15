@@ -6,7 +6,7 @@ if ($is_localhost) {
     // Localhost configuration
     $mysql_hostname = "localhost";
     $mysql_user = "root";
-    $mysql_password = "";
+    $mysql_password = "Uts@v1907";
     $mysql_database = "cms";
 } else {
     // Hostinger (Production) configuration

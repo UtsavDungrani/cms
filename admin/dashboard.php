@@ -22,7 +22,6 @@ if (strlen($_SESSION['alogin']) == 0) {
 
     <!-- Bootstrap core CSS -->
     <link rel="icon" type="image/x-icon" href="../img/favicon.ico">
-    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="../assets/icons/css/font-awesome.css" rel="stylesheet" />
 
     <style>
@@ -398,7 +397,6 @@ if (strlen($_SESSION['alogin']) == 0) {
 
     <!-- JS placed at end -->
     <script src="../assets/scripts/jquery-1.9.1.min.js"></script>
-    <script src="bootstrap/js/bootstrap.min.js"></script>
 </body>
 
 </html>

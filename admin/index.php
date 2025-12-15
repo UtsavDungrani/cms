@@ -59,8 +59,6 @@ if (isset($_POST['submit'])) {
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>ResolveX | Admin Login</title>
-	<link type="text/css" href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
-	<link type="text/css" href="bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet">
 	<link type="text/css" href="../assets/css/theme.css" rel="stylesheet">
 	<link type="text/css" href="../assets/icons/css/font-awesome.css" rel="stylesheet">
 	<link rel="icon" type="image/x-icon" href="../img/favicon.ico">
@@ -351,7 +349,6 @@ if (isset($_POST['submit'])) {
 
 	<script src="../assets/scripts/jquery-1.9.1.min.js" type="text/javascript"></script>
 	<script src="../assets/scripts/jquery-ui-1.10.1.custom.min.js" type="text/javascript"></script>
-	<script src="bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
 
 	<script>
 		function togglePassword(fieldId, el) {

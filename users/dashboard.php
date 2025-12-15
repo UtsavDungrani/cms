@@ -323,12 +323,12 @@ if (strlen($_SESSION['login']) == 0) {
     </section>
 
     <!-- JS placed at end -->
-    <script src="assets/js/jquery.js"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
-    <script src="assets/js/jquery.dcjqaccordion.2.7.js"></script>
-    <script src="assets/js/jquery.scrollTo.min.js"></script>
+    <script src="../assets/js/jquery.js"></script>
+    <script src="../assets/js/bootstrap.min.js"></script>
+    <script src="../assets/js/jquery.dcjqaccordion.2.7.js"></script>
+    <script src="../assets/js/jquery.scrollTo.min.js"></script>
     <!-- <script src="assets/js/jquery.nicescroll.js"></script> -->
-    <script src="assets/js/common-scripts.js"></script>
+    <script src="../assets/js/common-scripts.js"></script>
   </body>
 
   </html>

@@ -13,8 +13,6 @@ if (strlen($_SESSION['alogin']) == 0) {
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>User Profile</title>
-    <link type="text/css" href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link type="text/css" href="bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet">
     <link type="text/css" href="../assets/css/theme.css" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="../img/favicon.ico">
     <link type="text/css" href="../assets/icons/css/font-awesome.css" rel="stylesheet">

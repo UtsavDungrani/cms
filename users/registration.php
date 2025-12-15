@@ -264,7 +264,7 @@ if (isset($_POST['submit'])) {
         }
     </style>
 
-    <script src="assets/js/jquery.js"></script>
+    <script src="../assets/js/jquery.js"></script>
     <script>
         function userAvailability() {
             $("#loaderIcon").show();
@@ -356,7 +356,7 @@ if (isset($_POST['submit'])) {
         </div>
     </div>
 
-    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="../assets/js/bootstrap.min.js"></script>
 </body>
 
 </html>

@@ -70,7 +70,6 @@ if (isset($_POST['submit'])) {
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Admin | Change Password</title>
   <link rel="icon" type="image/x-icon" href="../img/favicon.ico">
-  <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
   <link rel="stylesheet" href="../assets/css/theme.css">
   <link rel="stylesheet" href="../assets/icons/css/font-awesome.css">
   <style>
@@ -551,7 +550,6 @@ if (isset($_POST['submit'])) {
   <?php include('include/footer.php'); ?>
 
   <script src="../assets/scripts/jquery-1.9.1.min.js"></script>
-  <script src="bootstrap/js/bootstrap.min.js"></script>
   <script>
     // Close alert functionality
     document.addEventListener('DOMContentLoaded', function () {

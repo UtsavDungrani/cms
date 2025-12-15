@@ -438,13 +438,6 @@ if (strlen($_SESSION['login']) == 0) {
     <script type="text/javascript" src="../assets/js/bootstrap-inputmask/bootstrap-inputmask.min.js"></script>
     <script src="../assets/js/form-component.js"></script>
 
-    <script>
-      //custom select box
-      $(function () {
-        $('select.styled').customSelect();
-      });
-    </script>
-
   </body>
 
   </html>

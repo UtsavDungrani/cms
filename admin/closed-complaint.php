@@ -17,8 +17,6 @@ if (strlen($_SESSION['alogin']) == 0) {
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>Admin| Closed Complaints</title>
 		<link rel="icon" type="image/x-icon" href="../img/favicon.ico">
-		<link type="text/css" href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
-		<link type="text/css" href="bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet">
 		<link type="text/css" href="../assets/css/theme.css" rel="stylesheet">
 		<link type="text/css" href="../assets/icons/css/font-awesome.css" rel="stylesheet">
 		<link type="text/css" href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,400,600'
@@ -298,7 +296,6 @@ if (strlen($_SESSION['alogin']) == 0) {
 
 		<script src="../assets/scripts/jquery-1.9.1.min.js" type="text/javascript"></script>
 		<script src="../assets/scripts/jquery-ui-1.10.1.custom.min.js" type="text/javascript"></script>
-		<script src="bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
 		<script src="../assets/scripts/flot/jquery.flot.js" type="text/javascript"></script>
 		<script src="../assets/scripts/datatables/jquery.dataTables.js"></script>
 		<script>
