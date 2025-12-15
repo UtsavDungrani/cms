@@ -56,8 +56,9 @@ if (strlen($_SESSION['login']) == 0) {
     <link rel="icon" type="image/x-icon" href="../img/favicon.ico">
     <!--external css-->
     <link href="../assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
-    <link rel="stylesheet" type="text/css" href="../assets/js/bootstrap-datepicker/css/datepicker.css" />
-    <link rel="stylesheet" type="text/css" href="../assets/js/bootstrap-daterangepicker/daterangepicker.css" />
+    <!-- Corrected paths for datepicker and daterangepicker CSS -->
+    <link rel="stylesheet" type="text/css" href="../assets/plugins/bootstrap-datepicker/css/datepicker.css" />
+    <link rel="stylesheet" type="text/css" href="../assets/plugins/bootstrap-daterangepicker/daterangepicker-bs3.css" />
 
     <style>
       :root {
@@ -412,29 +413,30 @@ if (strlen($_SESSION['login']) == 0) {
     </section>
 
     <!-- js placed at the end of the document so the pages load faster -->
-    <script src="assets/js/jquery.js"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
-    <script class="include" type="text/javascript" src="assets/js/jquery.dcjqaccordion.2.7.js"></script>
-    <script src="assets/js/jquery.scrollTo.min.js"></script>
+    <!-- Corrected JS paths to point to actual asset locations -->
+    <script src="../assets/js/jquery.js"></script>
+    <script src="../assets/js/bootstrap.min.js"></script>
+    <script class="include" type="text/javascript" src="../assets/js/jquery.dcjqaccordion.2.7.js"></script>
+    <script src="../assets/js/jquery.scrollTo.min.js"></script>
 
     <!--common script for all pages-->
-    <script src="assets/js/common-scripts.js"></script>
+    <script src="../assets/js/common-scripts.js"></script>
 
     <!--script for this page-->
-    <script src="assets/js/jquery-ui-1.9.2.custom.min.js"></script>
+    <script src="../assets/js/jquery-ui-1.9.2.custom.min.js"></script>
 
     <!--custom switch-->
-    <script src="assets/js/bootstrap-switch.js"></script>
+    <script src="../assets/js/bootstrap-switch.js"></script>
 
     <!--custom tagsinput-->
-    <script src="assets/js/jquery.tagsinput.js"></script>
+    <script src="../assets/js/jquery.tagsinput.js"></script>
 
-    <!--custom checkbox & radio-->
-    <script type="text/javascript" src="assets/js/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
-    <script type="text/javascript" src="assets/js/bootstrap-daterangepicker/date.js"></script>
-    <script type="text/javascript" src="assets/js/bootstrap-daterangepicker/daterangepicker.js"></script>
-    <script type="text/javascript" src="assets/js/bootstrap-inputmask/bootstrap-inputmask.min.js"></script>
-    <script src="assets/js/form-component.js"></script>
+    <!--custom checkbox & radio / date related plugins -->
+    <script type="text/javascript" src="../assets/plugins/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
+    <script type="text/javascript" src="../assets/plugins/bootstrap-daterangepicker/moment.min.js"></script>
+    <script type="text/javascript" src="../assets/plugins/bootstrap-daterangepicker/daterangepicker.js"></script>
+    <script type="text/javascript" src="../assets/js/bootstrap-inputmask/bootstrap-inputmask.min.js"></script>
+    <script src="../assets/js/form-component.js"></script>
 
     <script>
       //custom select box

@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.3
+-- version 5.2.2
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Nov 25, 2025 at 05:46 AM
--- Server version: 10.4.32-MariaDB
--- PHP Version: 8.0.30
+-- Host: 127.0.0.1:3306
+-- Generation Time: Dec 15, 2025 at 03:06 PM
+-- Server version: 11.8.3-MariaDB-log
+-- PHP Version: 7.2.34
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `cms`
+-- Database: `u221873998_cms`
 --
 
 -- --------------------------------------------------------
@@ -55,6 +55,13 @@ CREATE TABLE `area` (
   `postingDate` timestamp NOT NULL DEFAULT current_timestamp(),
   `updationDate` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `area`
+--
+
+INSERT INTO `area` (`id`, `city_id`, `areaName`, `pincode`, `postingDate`, `updationDate`) VALUES
+(1, 1, 'Sidsar', '340103', '2025-12-15 07:08:23', NULL);
 
 -- --------------------------------------------------------
 
@@ -102,6 +109,14 @@ CREATE TABLE `city` (
   `updationDate` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Dumping data for table `city`
+--
+
+INSERT INTO `city` (`id`, `state_id`, `cityName`, `postingDate`, `updationDate`) VALUES
+(1, 1, 'Bhavnagar ', '2025-11-25 10:29:08', NULL),
+(2, 1, 'Bhavnagar', '2025-12-15 07:07:51', NULL);
+
 -- --------------------------------------------------------
 
 --
@@ -129,6 +144,13 @@ CREATE TABLE `state` (
   `postingDate` timestamp NOT NULL DEFAULT current_timestamp(),
   `updationDate` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+
+--
+-- Dumping data for table `state`
+--
+
+INSERT INTO `state` (`id`, `stateName`, `stateDescription`, `postingDate`, `updationDate`) VALUES
+(1, 'Gujarat ', '', '2025-11-25 10:28:48', '');
 
 -- --------------------------------------------------------
 
@@ -213,7 +235,10 @@ INSERT INTO `subcategory` (`id`, `categoryid`, `subcategory`, `creationDate`, `u
 (63, 12, 'Distribution Pipelines', '2025-09-11 06:22:47', ''),
 (64, 12, 'Service Pipelines', '2025-09-11 06:23:13', ''),
 (65, 12, 'Special Pipelines', '2025-09-11 06:23:24', ''),
-(66, 10, 'v1', '2025-10-07 04:28:08', '');
+(66, 10, 'v1', '2025-10-07 04:28:08', ''),
+(67, 1, 'Drain Blockage', '2025-12-15 06:44:56', ''),
+(68, 1, 'Water Overflow', '2025-12-15 06:45:08', ''),
+(69, 2, 'Broken/ Damaged fooths', '2025-12-15 06:45:52', '');
 
 -- --------------------------------------------------------
 
@@ -254,6 +279,27 @@ CREATE TABLE `userlog` (
   `status` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
+--
+-- Dumping data for table `userlog`
+--
+
+INSERT INTO `userlog` (`id`, `uid`, `username`, `userip`, `loginTime`, `logout`, `status`) VALUES
+(1, 0, 'utsavdungrani7@gmail.com', 0x323430323a6130303a3138393a333137, '2025-11-25 06:28:01', '', 0),
+(2, 0, 'utsavdungrani7@gmail.com', 0x323430323a6130303a3138393a333137, '2025-11-25 06:28:06', '25-11-2025 11:59:10 AM', 0),
+(3, 0, 'utsavdungrani7@gmail.com', 0x3130332e3230362e3133362e33360000, '2025-11-25 07:00:20', '', 0),
+(4, 0, 'bhautikbhankecha@gmail.com', 0x323430393a343063313a323130373a35, '2025-11-25 09:45:59', '30-11-2025 01:58:21 PM', 0),
+(5, 0, 'bhautikdhankecha@gmail.com', 0x323430393a343063313a323130373a35, '2025-11-25 10:18:57', '', 0),
+(6, 0, 'bhautikdhankecha@gmail.com', 0x323430393a343063313a323130373a35, '2025-11-25 10:19:42', '', 0),
+(7, 0, 'bhautikdhankecha@gmail.com', 0x323430393a343063313a323130373a35, '2025-11-25 10:21:47', '', 0),
+(8, 0, 'bhautikibhankecha@gmail.com', 0x323430393a343063313a333030393a65, '2025-11-25 15:37:25', '', 0),
+(9, 0, 'bhautikibhankecha@gmail.com', 0x323430393a343063313a333030393a65, '2025-11-25 15:37:34', '', 0),
+(10, 0, 'bhautikdhankecha@gmail.com', 0x323430393a343063313a333030393a65, '2025-11-25 15:37:57', '', 0),
+(11, 0, 'bhautikdhankecha@gmail.com', 0x323430393a343063313a333030393a65, '2025-11-25 15:38:20', '', 0),
+(12, 0, 'bhautikibhankecha@gmail.com', 0x323430393a343063313a333030393a65, '2025-11-25 15:40:14', '', 0),
+(13, 0, 'yugkheni@gmail.com', 0x323430393a343063313a333135333a32, '2025-12-15 06:39:04', '', 0),
+(14, 0, 'utsavdungrani@gmail.com', 0x323430393a343063313a333135333a32, '2025-12-15 06:39:44', '', 0),
+(15, 0, 'utsavdungrani7@gmail.com', 0x323430393a343063313a333135333a32, '2025-12-15 06:40:07', '15-12-2025 12:11:42 PM', 0);
+
 -- --------------------------------------------------------
 
 --
@@ -276,6 +322,17 @@ CREATE TABLE `users` (
   `status` int(1) NOT NULL,
   `aadhar_card` bigint(12) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+
+--
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`id`, `fullName`, `userEmail`, `password`, `contactNo`, `address`, `State`, `country`, `pincode`, `userImage`, `regDate`, `updationDate`, `status`, `aadhar_card`) VALUES
+(1, 'Utsav Dungrani', 'utsavdungrani7@gmail.com', '4feeceffc2757746da153da83ba405dd', 9173283815, NULL, NULL, NULL, NULL, NULL, '2025-11-25 06:28:16', '2025-11-25 06:28:16', 1, 0),
+(2, 'Bhatik dhankecha', 'bhautikdhankecha@gmail.com', 'a2e8628a0023dba6c064a2b6fda9d3b4', 9823145672, NULL, NULL, NULL, NULL, NULL, '2025-11-25 09:36:21', '2025-11-25 09:36:21', 1, 0),
+(3, 'Yug Kheni', 'yugkheni@gmail.com', '407f75275849ed822114f6475ed813df', 9174293815, NULL, NULL, NULL, NULL, NULL, '2025-11-25 09:37:31', '2025-11-25 09:37:31', 1, 0),
+(4, 'Riya Langaliya', 'riyalangaliya@gmail.com', '18f4becff6db8be4be6d560396d00ad0', 9824456715, NULL, NULL, NULL, NULL, NULL, '2025-11-25 09:38:16', '2025-11-25 09:38:16', 1, 0),
+(5, 'Dhankecha Bhautik ', 'bhautikbhankecha@gmail.com', 'e4fa2fcd38f72d30c816a2ac6ea25db6', 9428120807, NULL, NULL, NULL, NULL, NULL, '2025-11-25 10:22:14', '2025-11-25 10:22:14', 1, 0);
 
 --
 -- Indexes for dumped tables
@@ -357,7 +414,7 @@ ALTER TABLE `admin`
 -- AUTO_INCREMENT for table `area`
 --
 ALTER TABLE `area`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `category`
@@ -369,43 +426,43 @@ ALTER TABLE `category`
 -- AUTO_INCREMENT for table `city`
 --
 ALTER TABLE `city`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `complaintremark`
 --
 ALTER TABLE `complaintremark`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `state`
 --
 ALTER TABLE `state`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `subcategory`
 --
 ALTER TABLE `subcategory`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=67;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=70;
 
 --
 -- AUTO_INCREMENT for table `tblcomplaints`
 --
 ALTER TABLE `tblcomplaints`
-  MODIFY `complaintNumber` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1;
+  MODIFY `complaintNumber` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `userlog`
 --
 ALTER TABLE `userlog`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- Constraints for dumped tables
