@@ -25,19 +25,25 @@
 			-webkit-transform: translateZ(0);
 		}
 
-		.sidebar-toggle-box {
+		/* Mobile / sidebar toggle button */
+		.sidebar-toggle {
 			margin-right: 20px;
 			cursor: pointer;
 			padding: 10px;
 			border-radius: 6px;
 			transition: background-color 0.2s ease;
+			border: none;
+			background: transparent;
+			display: none;
+			align-items: center;
+			justify-content: center;
 		}
 
-		.sidebar-toggle-box:hover {
+		.sidebar-toggle:hover {
 			background: #f1f5f9;
 		}
 
-		.sidebar-toggle-box .icon-reorder {
+		.sidebar-toggle .icon-reorder {
 			font-size: 20px;
 			color: var(--header-text);
 		}
@@ -228,10 +234,18 @@
 			.top-menu {
 				margin-right: 10px;
 			}
+
+			/* Show sidebar toggle button on mobile */
+			.sidebar-toggle {
+				display: inline-flex;
+			}
 		}
 	</style>
 
 	<!--logo start-->
+	<button class="sidebar-toggle" aria-label="Toggle navigation">
+		<i class="icon-reorder"></i>
+	</button>
 	<a href="dashboard.php" class="logo">
 		<div class="logo-icon">
 			<i class="icon-cog"></i>

@@ -30,6 +30,7 @@
 				top: 60px;
 				transform: translateZ(0);
 				-webkit-transform: translateZ(0);
+				transition: transform 0.25s ease-out;
 			}
 
 			.sidebar-menu {
@@ -173,11 +174,36 @@
 				flex-shrink: 0;
 			}
 
+			/* Mobile: hide sidebar off-canvas by default, slide in when open */
 			@media (max-width: 768px) {
 				#sidebar {
-					width: 260px;
-					left: 0;
+					transform: translateX(-100%);
 				}
+
+				body.sidebar-open #sidebar {
+					transform: translateX(0);
+				}
+
+				/* Ensure menu is visible on mobile even if JS sets display:none inline */
+				#sidebar ul.sidebar-menu#nav-accordion {
+					display: block !important;
+				}
+			}
+
+			/* Dark overlay behind sidebar on mobile */
+			#sidebar-overlay {
+				position: fixed;
+				inset: 0;
+				background: rgba(15, 23, 42, 0.45);
+				z-index: 900;
+				opacity: 0;
+				visibility: hidden;
+				transition: opacity 0.25s ease-out, visibility 0.25s ease-out;
+			}
+
+			body.sidebar-open #sidebar-overlay {
+				opacity: 1;
+				visibility: visible;
 			}
 		</style>
 
@@ -326,9 +352,12 @@
 		</div>
 	</div>
 
+	<div id="sidebar-overlay"></div>
+
 	<script>
-		// Toggle sub-menu
+		// Toggle sub-menu + mobile sidebar behavior
 		document.addEventListener('DOMContentLoaded', function () {
+			// Sub-menus
 			var subMenus = document.querySelectorAll('.sub-menu > a');
 			subMenus.forEach(function (menu) {
 				menu.addEventListener('click', function (e) {
@@ -336,6 +365,44 @@
 					var parent = this.parentNode;
 					parent.classList.toggle('open');
 				});
+			});
+
+			// Mobile sidebar toggle
+			var toggleBtn = document.querySelector('.sidebar-toggle');
+			var overlay = document.getElementById('sidebar-overlay');
+			var body = document.body;
+
+			if (toggleBtn) {
+				toggleBtn.addEventListener('click', function () {
+					body.classList.toggle('sidebar-open');
+				});
+			}
+
+			if (overlay) {
+				overlay.addEventListener('click', function () {
+					body.classList.remove('sidebar-open');
+				});
+			}
+
+			// Close sidebar when a menu link is clicked on mobile,
+			// but keep it open when tapping a parent "sub-menu" toggle
+			var sidebarLinks = document.querySelectorAll('#sidebar a');
+			sidebarLinks.forEach(function (link) {
+				link.addEventListener('click', function () {
+					if (window.innerWidth <= 768) {
+						if (this.parentElement && this.parentElement.classList.contains('sub-menu')) {
+							return;
+						}
+						body.classList.remove('sidebar-open');
+					}
+				});
+			});
+
+			// Reset sidebar state if window resized to desktop
+			window.addEventListener('resize', function () {
+				if (window.innerWidth > 768) {
+					body.classList.remove('sidebar-open');
+				}
 			});
 		});
 	</script>

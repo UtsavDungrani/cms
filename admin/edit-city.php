@@ -228,7 +228,7 @@ if (strlen($_SESSION['alogin']) == 0) {
 
             @media (max-width: 768px) {
                 #main-content {
-                    margin-left: 260px;
+                    margin-left: 0;
                     padding: 15px;
                     padding-top: 80px;
                 }

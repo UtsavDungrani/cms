@@ -63,6 +63,22 @@
             margin-left: auto;
         }
 
+        /* Mobile sidebar toggle button */
+        .sidebar-toggle {
+            display: none;
+            border: none;
+            background: transparent;
+            color: var(--header-text);
+            font-size: 22px;
+            margin-right: 12px;
+            cursor: pointer;
+            padding: 6px;
+        }
+
+        .sidebar-toggle:focus {
+            outline: none;
+        }
+
         .nav.pull-right.top-menu {
             display: flex;
             list-style: none;
@@ -118,10 +134,20 @@
             .logo {
                 font-size: 18px;
             }
+
+            .sidebar-toggle {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+            }
         }
     </style>
 
     <!--logo start-->
+    <button class="sidebar-toggle" aria-label="Toggle navigation">
+        <!-- Use a different icon than .fa-bars to avoid legacy JS sidebar toggle conflicts -->
+        <i class="fa fa-navicon"></i>
+    </button>
     <a href="dashboard.php" class="logo">
         <div class="logo-icon">
             <i class="fa fa-user"></i>
